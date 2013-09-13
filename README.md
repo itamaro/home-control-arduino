@@ -21,6 +21,8 @@ The HEX value is the decoded signal value, and the raw list is a list of IR mark
 My A/C is controlled with an IR remote that is not supported and recognized by Ken Shirriff's library.
 The [original Arduino-IRremote library](https://github.com/shirriff/Arduino-IRremote) works with up to 100 mark/space buckets, while my A/C remote sends longer signals (around 180-190 buckets), so I [forked the library](https://github.com/itamaro/Arduino-IRremote) in order to add support for my remote.
 
+In my circuit, I used a simple [38KHz IR Photosransistor](http://www.luckylightled.com/UploadFiles/LL-503PTC2E-1AD.pdf).
+
 
 Arduino A/C IR Sender
 ---------------------
@@ -54,6 +56,8 @@ The IR-transmission initiation command (S) reports several status messages:
 - "Sending A/C command with following parameters: Power=\<pwr\>, Mode=\<mode\>, Fan=\<fan\>, Temperature=\<temp\>" -- in case the state is valid, before actually transmitting anything.
 - "Success" -- if IR signal was sent successfully.
 - "Unsupported Command" -- if the current state is valid, but an IR signal for that state is not preconfigured.
+
+In my circuit I used a simple [IR LED](http://www.4project.co.il/documents/doc_612_811.pdf).
 
 
 A/C IR Analyzer
