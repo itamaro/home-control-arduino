@@ -38,11 +38,11 @@ void dump(decode_results *results)
   {
     Serial.print(" ");
     if ((i % 2) == 0)
-	{
-	  // Mark gaps (spaces) as negative numbers in the output
+    {
+      // Mark gaps (spaces) as negative numbers in the output
       Serial.print("-");
     }
-	// Display mark/space lengths in microseconds
+    // Display mark/space lengths in microseconds
     Serial.print(results->rawbuf[i]*USECPERTICK, DEC);
   }
   Serial.println("");
